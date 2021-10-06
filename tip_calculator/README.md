@@ -5,9 +5,9 @@ Which will then be calculated and displayed to the user. Upon completion the use
 
 ## How to run the calculator
 
-1. Clone the app from the repository "git clone https://github.com/joe-bollinger/python-projects/tree/main/tip_calculator".
-2. Traverse to the tip calculator file.
+1. Clone the app from the repository by typing: "git clone https://github.com/joe-bollinger/python-projects/tree/main/tip_calculator" in the command line.
+2. Traverse to the tip_calculator.py file.
 3. Run the calculator by clicking the run button in the code editor
    or by typing the "python3 tip_calculator.py" in the terminal.
-4. Answer the questions provided by the tip calculator, entering numbers only (i.e. an integer such as 12 or a float such as 45.67)
-5. Upon completion the user will be given the amount that should be paid by each person
+4. Answer the questions provided by the tip calculator, entering numbers only (i.e. an integer such as 12 or a float such as 45.67).
+5. Upon completion the user will be given the amount that should be paid by each person.
