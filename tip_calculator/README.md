@@ -5,7 +5,7 @@ Which will then be calculated and displayed to the user. Upon completion the use
 
 ## How to run the calculator
 
-1. Clone the app from the repository "git clone https://github.com/joe-bollinger/python-projects/".
+1. Clone the app from the repository "git clone https://github.com/joe-bollinger/python-projects/tree/main/tip_calculator".
 2. Traverse to the tip calculator file.
 3. Run the calculator by clicking the run button in the code editor
    or by typing the "python3 tip_calculator.py" in the terminal.
