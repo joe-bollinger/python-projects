@@ -5,7 +5,7 @@ print()
 get_cost = input('How much did your meal cost? (i.e. 45.67) ')
 # Convert the input string to a float
 get_cost = float(get_cost)
-print('Food Cost:', format(get_cost, '.2f'))
+print(f"Food Cost: ${format(get_cost, '.2f')}")
 
 
 # TODO: Calculate 10% sales tax for the bill and print the results.
@@ -15,7 +15,7 @@ def calc_tax():
     return round(get_cost * 1.10, 2)
 
 
-print('Your bill after tax:', format(calc_tax(), '.2f'))
+print(f"Your bill after tax: ${format(calc_tax(), '.2f')}")
 print()
 
 
@@ -23,8 +23,8 @@ print()
 get_tip = input(
     'What percentage of the bill would you like to pay as a tip? Please type in a number (i.e. 15) ')
 # Convert the input string to an integer.
-get_tip = int(get_tip)
-print('Tip Percentage:', get_tip)
+get_tip = float(get_tip)
+print(f'Customer wants to tip: {get_tip}%')
 
 
 # TODO: Calculate the tip amount and print the results.
@@ -33,12 +33,20 @@ print('Tip Percentage:', get_tip)
 def calc_tip(tip):
     if tip <= 0:
         tip = 0
-        return round(calc_tax() * (1 + (tip / 100)), 2)
+        return round(get_cost * ((tip / 100)), 2)
     else:
-        return round(calc_tax() * (1 + (tip / 100)), 2)
+        return round(get_cost * ((tip / 100)), 2)
 
 
-print('After tip:', calc_tip(get_tip))
+print(f'Tip amount: ${calc_tip(get_tip)}')
+
+
+def total_amount():
+    return calc_tip(get_tip) + calc_tax()
+
+
+print(f'Total cost after tax and tip: ${total_amount()}')
+
 print()
 
 # TODO: Get number of people splitting the bill
@@ -53,7 +61,8 @@ print('Diners:', get_diners)
 def split_amount(amount):
     if amount <= 0:
         amount = 1
-    return round(calc_tip(get_tip) / amount, 2)
+    return round(total_amount() / amount, 2)
 
 
-print('Each person should pay:', format(split_amount(get_diners), '.2f'))
+print()
+print(f"Each person should pay: ${format(split_amount(get_diners), '.2f')}")
