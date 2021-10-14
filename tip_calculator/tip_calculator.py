@@ -22,7 +22,7 @@ print()
 # TODO: Get the amount the customer would like to pay for a tip and print the results.
 get_tip = input(
     'What percentage of the bill would you like to pay as a tip? Please type in a number (i.e. 15) ')
-# Convert the input string to an integer.
+# Convert the input string to a float.
 get_tip = float(get_tip)
 print(f'Customer wants to tip: {get_tip}%')
 
